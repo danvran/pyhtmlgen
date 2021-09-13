@@ -1,4 +1,4 @@
-def start(site_title):
+def start_styled_html(site_title):
     """
     :param site_title: string to be the title of the HTML page, the default is eqaul to no page name
     :return: string containing HTML content
@@ -20,9 +20,9 @@ def start(site_title):
     <style>
     html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif; color: #a3978f}
     body {background-color: #f3f2f1;}
-    table, th, td {color:#e8e5e3; border: 1px solid black; border-collapse: collapse;}
-    tr:nth-child(odd) {background-color: #990030;}
-    tr:nth-child(even) {background-color: #a3978f;}
+    table, th, td {color:#a3978f; border: 1px solid #a3978f; border-collapse: collapse; text-align: center}
+    tr:nth-child(odd) {background-color: #f3f2f1;}
+    tr:nth-child(even) {background-color: #f3f2f1;}
     </style>
     </head>
     <body class="w3-light-grey">
@@ -32,6 +32,24 @@ def start(site_title):
     """
     return html_start
 
+
+def start_basic_html(site_title):
+    """
+    :param site_title: string to be the title of the HTML page, the default is eqaul to no page name
+    :return: string containing HTML content
+    """
+    if not isinstance(site_title, str):
+        raise TypeError("input must be a string")
+
+    html_start = """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>""" + site_title + """</title>
+    <body>
+    """
+    return html_start
 
 def h1(text):
     """
@@ -90,7 +108,7 @@ def line_break():
     return line_break
 
 
-def end():
+def end_styled_html():
     """
     :return: string containing string representing the end of a HTML document
     """
@@ -196,4 +214,11 @@ def single_plotly_figure(site_title, figure):
     <!-- End Page Container -->
     </div>
     </html>"""
+    return html
+
+def end_basic_html():
+    html = """
+    </body>
+    </html>
+    """
     return html
