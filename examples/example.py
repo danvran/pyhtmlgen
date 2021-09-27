@@ -68,7 +68,7 @@ website += htmlgen.add_image_by_ref("https://images.unsplash.com/photo-154598779
 website += htmlgen.end_styled_html()
 
 # don't forget to save your website to a file
-with open('c:/Users/Daniel/OneDrive - Helmut-Schmidt-Universität/Desktop/Testwebsite.html', 'w') as f:
+with open('Testwebsite.html', 'w') as f:
     f.write(website)
 
 print("Finished Script")
