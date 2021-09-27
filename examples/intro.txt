@@ -1,0 +1,9 @@
+The pyhtml library has the purpose of creating text strings containing html syntax within your python script without any knowledge of html.
+
+To do this, the library provides a set of functions to generate the strings one needs. Depending on the wished result, the input can be left empty, be a string, a numpy array a plotly figure or an external link.
+
+Since html documents need a certain structure the document needs to initialized with the start_basic_html or start_styled_html functions and needs to be ended with the end_basic_html or end_styled_html respectively.
+
+The library does not depend on external libraries, since it all it does is to generate some string variables. Though you will need to install plotly, numpy, pandas and other libraries to actually generate the plots, arrays or data frames you wish to use with the library of course.
+
+This example file will show you some of the most significant features of the library.

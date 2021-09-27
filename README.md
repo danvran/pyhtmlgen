@@ -14,17 +14,19 @@ pip install pyhtmlgen
 * paragraphs
 * line breaks
 * tables
-* start and end
+* links
+* pictures
 
 ## supported python objects
 * strings
 * numpy matrices
+* pandas dataframes
 * plotly figures
 
 ## How to use
-* create a variable to store a string within your script
+* wothin your python code create a variable to store a string
 * use generators.start('Title of your page') to add the html head
-* add content as you wish
+* add content as needed using the other functions
 * use generators.end() to close the html file correctly
 * write the variable to a file
 
